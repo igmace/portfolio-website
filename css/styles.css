@@ -1,3 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+header {
+  background-color: #352aaa;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 5px 5px 13px rgba(53, 42, 170, 0.4); 
+  -webkit-box-shadow: 5px 5px 13px rgba(53, 42, 170, 0.4); 
+  -moz-box-shadow: 5px 5px 13px rgba(53, 42, 170, 0.4); 
+  position: fixed;
+  width: 100%;
+}
+.logo {
+  max-width: 150px;
+}
+main {
+  padding-top: 133px;
+}
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+nav > ul > li {
+  display: inline-block;
+}
+nav > ul > li > a {
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #ffffff;
+}
+nav > ul > li > a:hover {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #6877dc;
+  text-decoration: underline;
+}
+nav > ul > li > a:active {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #6877dc;
+}
+nav > ul > li > a:visited {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #6877dc;
+}
+#hero {
+  background-color: #6877dc;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
 body{
     background-color: #ffffff;
     font-family: "Montserrat", sans-serif;
@@ -25,15 +82,28 @@ h1 {
     width: 100%;
   }
   a {
-    color: #352aaa;
+    color: #ffffff;
     text-decoration: none;
   }
   a:hover {
-    color: #6877dc;
+    color: #ffffff;
     text-decoration: underline; 
   }
   a:active { 
     color: #6877dc;
+  }
+  a:visited { 
+    color: #352aaa;
+  }
+  /* Layout Styling */
+  .container {
+    padding: 0 15px;
+  }
+  .row {
+    margin: 25px 0;
+  }
+  #work .row { 
+    padding-bottom: 25px; border-bottom: 1px solid #202020; 
   }
   .button {
     display: inline-block; 
@@ -55,6 +125,11 @@ h1 {
     opacity: 0.8;
     text-decoration: none;
   }
+  .button:visited {
+    color: #ffffff;
+    opacity: 0.8;
+    text-decoration: none;
+  }
   .button.contact {
     background-color: transparent;
     color: #202020;
@@ -64,4 +139,4 @@ h1 {
   .button.contact:hover {
     background-color: #202020;
     color: #ffffff;
-  } 
+  }
