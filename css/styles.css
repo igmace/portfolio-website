@@ -1,13 +1,13 @@
+/* ==============================
+Header and Main Navigation
+================================= */
 * {
   box-sizing: border-box;
 }
 header {
-  background-color: #352aaa;
+  background-color: #202020;
   text-align: center;
   padding: 10px 0;
-  box-shadow: 5px 5px 13px rgba(53, 42, 170, 0.4); 
-  -webkit-box-shadow: 5px 5px 13px rgba(53, 42, 170, 0.4); 
-  -moz-box-shadow: 5px 5px 13px rgba(53, 42, 170, 0.4); 
   position: fixed;
   width: 100%;
 }
@@ -15,7 +15,7 @@ header {
   max-width: 150px;
 }
 main {
-  padding-top: 133px;
+  padding-top: 95px;
 }
 nav > ul {
   list-style-type: none;
@@ -26,27 +26,14 @@ nav > ul > li {
   display: inline-block;
 }
 nav > ul > li > a {
-  padding: 10px;
+  padding: 0 10px;
   text-transform: uppercase;
   font-weight: 500;
   color: #ffffff;
 }
-nav > ul > li > a:hover {
-  text-transform: uppercase;
-  font-weight: 500;
-  color: #6877dc;
-  text-decoration: underline;
-}
-nav > ul > li > a:active {
-  text-transform: uppercase;
-  font-weight: 500;
-  color: #6877dc;
-}
-nav > ul > li > a:visited {
-  text-transform: uppercase;
-  font-weight: 500;
-  color: #6877dc;
-}
+/* ==============================
+Hero Section
+================================= */
 #hero {
   background-color: #6877dc;
   color: #ffffff;
@@ -55,7 +42,13 @@ nav > ul > li > a:visited {
   display: inline-block;
   width: 100%;
 }
-body{
+#hero span { 
+  display: block;
+}
+/* ==============================
+General Styles
+================================= */
+body {
     background-color: #ffffff;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -81,39 +74,33 @@ h1 {
  img {
     width: 100%;
   }
+  #pr-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
   a {
     color: #ffffff;
     text-decoration: none;
   }
   a:hover {
     color: #ffffff;
-    text-decoration: underline; 
   }
   a:active { 
-    color: #6877dc;
+    color: #ffffff;
   }
   a:visited { 
-    color: #352aaa;
-  }
-  /* Layout Styling */
-  .container {
-    padding: 0 15px;
-  }
-  .row {
-    margin: 25px 0;
-  }
-  #work .row { 
-    padding-bottom: 25px; border-bottom: 1px solid #202020; 
+    color: #ffffff;
   }
   .button {
     display: inline-block; 
     background-color: #202020;
     color: #ffffff;
     font-weight: 400;
+    text-decoration: none;
     padding: 10px;
     border-radius: 3px;
-    border-bottom: 2px solid #202020;
-    transition: 0.2s opacity;
+    transition: 0.5s opacity;
   }
   .button:hover {
     color: #ffffff;
@@ -132,11 +119,241 @@ h1 {
   }
   .button.contact {
     background-color: transparent;
-    color: #202020;
+    color: #ffffff;
     text-transform: uppercase;
-    border: 2px solid #202020;
+    border: 2px solid #ffffff;
+    transition: 0.5s opacity;
   }
   .button.contact:hover {
-    background-color: #202020;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #202020;
+    font-weight: 500;
+    opacity: 0.8;
+ }
+/* ==============================
+Layout Styling
+================================= */
+  .container {
+    padding: 0 15px;
   }
+  .row {
+    margin: 25px 0;
+  }
+  #work h2 {
+    text-align: center;
+  }
+  #work .row { 
+    padding-bottom: 25px; border-bottom: 1px solid #202020; 
+  }
+  .footer {
+    background-color: #6877dc;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    display: inline-block;
+    width: 100%;
+  }
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  #about-page h3 { 
+    margin-top: 0;
+  }
+  #about-page h1, h2 {
+    text-align: center;
+}
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+  .col-lg-7 {
+    width: 60%;
+  }
+  .col-lg-5 {
+    width: 40%;
+  }
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  #about-page h3 { 
+    margin-top: 0;
+  }
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+  .col-lg-7 {
+    width: 60%;
+  }
+  .col-lg-5 {
+    width: 40%;
+  }
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  #about-page h3 { 
+    margin-top: 0;
+  }
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* ==============================
+Extra-large devices (1920px or larger)
+================================= */
+@media only screen and (min-width: 1920px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+  .col-xl-8 {
+    width: 70%;
+  }
+  .col-xl-4 {
+    width: 30%;
+  }
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  #about-page h3 { margin-top: 0;
+  }
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* ==============================
+Animations
+================================= */
+ul.navigation a {
+  color: #ffffff;
+  padding: 10px 10px;
+  position: relative;
+}
+ul.navigation a:before, ul.navigation a:after {
+  position: absolute;
+  opacity: 0;
+  width: 0%;
+  height: 1px;
+  content: '';
+  background: #ffffff;
+  transition: all 0.3s;
+}
+ul.navigation a:before {
+  left: 0px;
+  top: 0px;
+}
+ul.navigation a:after {
+  right: 0px;
+  bottom: 0px;
+}
+ul.navigation a:hover:before, ul.navigation a:hover:after {
+  opacity: 1;
+  width: 100%;
+}
+@keyframes color-change {
+  from {fill: #ffecb5;}
+  to {fill: #f76414;}
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+@keyframes color-change-sea {
+  from {fill: #a1acf6;}
+  to {fill: #6877dc;}
+}
+.sea {
+  animation: 4s color-change-sea infinite alternate linear;
+}
+@keyframes cloud-move {
+  from {transform: translate(0,0px);}
+  to {transform: translate(300px,0);}
+}
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+@keyframes cloud-move-reverse {
+  from {transform: translate(150px,-50px);}
+  to {transform: translate(0, -50px);}
+}
+.cloud-back {
+  animation: 30s cloud-move-reverse infinite alternate linear;
+}
