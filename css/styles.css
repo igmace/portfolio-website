@@ -15,7 +15,7 @@ header {
   max-width: 150px;
 }
 main {
-  padding-top: 95px;
+  padding-top: 133px;
 }
 nav > ul {
   list-style-type: none;
@@ -45,31 +45,36 @@ Hero Section
 #hero span { 
   display: block;
 }
+#hero-text {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* ==============================
 General Styles
 ================================= */
 body {
-    background-color: #ffffff;
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #202020;
+   background-color: #ffffff;
+   font-family: "Montserrat", sans-serif;
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 1.6;
+   color: #202020;
 }
 h1, h2, h3, h4 {
     line-height: 1.4;
 }
 h1 {
-    font-size: 2.75em;
+    font-size: 1.25em;
     font-weight: 600;
  }
- h2 {
-    font-size: 2.25em;
-    font-weight: 500;
+h2 {
+  font-size: 1.15em;
+  font-weight: 575;
  }
- h3 {
-    font-size: 1.50em;
-    font-weight: 450;
+h3 {
+  font-size: 1.10em;
+  font-weight: 500;
  }
  img {
     width: 100%;
@@ -98,7 +103,7 @@ h1 {
     color: #ffffff;
     font-weight: 400;
     text-decoration: none;
-    padding: 10px;
+    padding: 8px 20px;
     border-radius: 3px;
     transition: 0.5s opacity;
   }
@@ -117,10 +122,15 @@ h1 {
     opacity: 0.8;
     text-decoration: none;
   }
+  .button.resume {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
   .button.contact {
     background-color: transparent;
     color: #ffffff;
-    text-transform: uppercase;
+    padding: 8px 20px;
+    text-align: center;
     border: 2px solid #ffffff;
     transition: 0.5s opacity;
   }
@@ -139,19 +149,32 @@ Layout Styling
   .row {
     margin: 25px 0;
   }
-  #work h2 {
-    text-align: center;
-  }
   #work .row { 
-    padding-bottom: 25px; border-bottom: 1px solid #202020; 
+    padding-bottom: 25px;
   }
   .footer {
-    background-color: #6877dc;
+    background-color: #202020;
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
     display: inline-block;
     width: 100%;
+  }
+  #about-me {
+    background-color: #6877dc;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 0;
+    display: inline-block;
+    width: 100%;
+  }
+.social > ul {
+    list-style-type: none;
+    padding: 5px;
+    width: 100%;
+  }
+.social > ul > li {
+    display: inline-block;
   }
 /* ==============================
 Medium devices (640px and larger)
@@ -166,6 +189,12 @@ Medium devices (640px and larger)
     float: right;
     margin-top: 4px;
   }
+  main {
+    padding-top: 99px;
+  }
+  h3 {
+    margin-top: -8px;  
+  }
   .col-md-6 {
     width: 50%;
   }
@@ -173,27 +202,30 @@ Medium devices (640px and larger)
     float: left;
     padding: 10px;
   }
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  #about-page h3 { 
-    margin-top: 0;
-  }
-  #about-page h1, h2 {
-    text-align: center;
+#my-story img {
+  width: 50%;
+  margin-left: 18px;
+  margin-bottom: 18px;
+  float: right;
 }
-  .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.button {
+   width:auto;
+ }
+ .container {
+   max-width: 1200px;
+   margin-left: auto;
+   margin-right: auto;
+ }
 }
 /* ==============================
-Large devices (1024px or larger)
+Large devices (900px or larger)
 ================================= */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 900px) {
   header {
     text-align: unset;
     padding: 20px 0 13px;
@@ -203,11 +235,11 @@ Large devices (1024px or larger)
     float: right;
     margin-top: 4px;
   }
-  .col-lg-7 {
-    width: 60%;
+  #hero-text {
+    max-width: unset;
   }
-  .col-lg-5 {
-    width: 40%;
+  main {
+    padding-top: 99px;
   }
   [class*="col-"] {
     float: left;
@@ -217,9 +249,6 @@ Large devices (1024px or larger)
     content: "";
     clear: both;
     display: table;
-  }
-  #about-page h3 { 
-    margin-top: 0;
   }
   .container {
     max-width: 1200px;
@@ -240,12 +269,6 @@ X-large devices (1440px or larger)
     float: right;
     margin-top: 4px;
   }
-  .col-lg-7 {
-    width: 60%;
-  }
-  .col-lg-5 {
-    width: 40%;
-  }
   [class*="col-"] {
     float: left;
     padding: 10px;
@@ -254,9 +277,6 @@ X-large devices (1440px or larger)
     content: "";
     clear: both;
     display: table;
-  }
-  #about-page h3 { 
-    margin-top: 0;
   }
   .container {
     max-width: 1200px;
@@ -277,12 +297,6 @@ Extra-large devices (1920px or larger)
     float: right;
     margin-top: 4px;
   }
-  .col-xl-8 {
-    width: 70%;
-  }
-  .col-xl-4 {
-    width: 30%;
-  }
   [class*="col-"] {
     float: left;
     padding: 10px;
@@ -291,8 +305,6 @@ Extra-large devices (1920px or larger)
     content: "";
     clear: both;
     display: table;
-  }
-  #about-page h3 { margin-top: 0;
   }
   .container {
     max-width: 1200px;
