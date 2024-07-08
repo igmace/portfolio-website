@@ -6,30 +6,49 @@ Header and Main Navigation
 }
 header {
   background-color: #202020;
-  text-align: center;
   padding: 10px 0;
   position: fixed;
   width: 100%;
 }
 .logo {
   max-width: 150px;
+  padding-top: 10px ;
 }
 main {
-  padding-top: 133px;
+  padding-top: 86px;
 }
 nav > ul {
   list-style-type: none;
   padding: 0;
-  width: 100%;
+  margin: 0;
 }
-nav > ul > li {
-  display: inline-block;
+nav > ul > li > a.icon {
+  margin-top: 6px;
 }
-nav > ul > li > a {
-  padding: 0 10px;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: #ffffff;
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+}
+.navtoggle.responsive li  {
+  display: block;
+}
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+}
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
 }
 /* ==============================
 Hero Section
@@ -177,20 +196,41 @@ Layout Styling
     display: inline-block;
   }
 /* ==============================
-Medium devices (640px and larger)
+Medium devices (641px and larger)
 ================================= */
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 641px) {
   header {
     text-align: unset;
     padding: 20px 0 13px;
+  }
+  .logo {
+    padding-top: 7px;
   }
   nav {
     width: auto;
     float: right;
     margin-top: 4px;
   }
+  nav > ul {
+    margin: 11px 0;
+  }
+  nav > ul > li {
+    display: inline-block;
+  }
+  nav > ul > li > a {
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  .navtoggle li:not(:last-child) {
+  display: inline-block;
+  }
+  .navtoggle li:last-child {
+  display: none;
+  }
   main {
-    padding-top: 99px;
+    padding-top: 96px;
   }
   h3 {
     margin-top: -8px;  
@@ -237,9 +277,6 @@ Large devices (900px or larger)
   }
   #hero-text {
     max-width: unset;
-  }
-  main {
-    padding-top: 99px;
   }
   [class*="col-"] {
     float: left;
@@ -341,19 +378,26 @@ ul.navigation a:hover:before, ul.navigation a:hover:after {
   opacity: 1;
   width: 100%;
 }
-@keyframes color-change {
-  from {fill: #ffecb5;}
-  to {fill: #f76414;}
+@keyframes color-change-sky {
+  from {fill: #d8deff;}
+  to {fill: #ffced9;}
+}
+.sky {
+  animation: 6s color-change-sky infinite alternate linear;
+}
+  @keyframes color-change-sun {
+   from {fill: #fff07e;}
+    to {fill: #fd7e2a}
 }
 .sun {
-  animation: 4s color-change infinite alternate linear;
+  animation: 6s color-change-sun infinite alternate linear;
 }
 @keyframes color-change-sea {
-  from {fill: #a1acf6;}
+  from {fill: #a1cdf6;}
   to {fill: #6877dc;}
 }
 .sea {
-  animation: 4s color-change-sea infinite alternate linear;
+  animation: 6s color-change-sea infinite alternate linear;
 }
 @keyframes cloud-move {
   from {transform: translate(0,0px);}
