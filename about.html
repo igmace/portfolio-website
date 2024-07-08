@@ -5,22 +5,29 @@
 		<meta name="author" content="Iris Mace">
 		<meta name="description" content="UI UX Designer Portfolio Phoenix">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>About Iris Mace</title>
+		<title>Iris Mace UI/UX Designer Phoenix</title>
 		<link rel="shortcut icon" href="img/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/483d677be3.js" crossorigin="anonymous"></script>
 	</head>
-	<body id="about-page">
+	<body id="home-page">
 		<header>
 			<div class="container">
-				<a href="index.html"><img class="logo" src="img/im-logo.png" alt="Iris Mace"></a>
-            	<nav>
-					<ul class="navigation">
-						<li><a href="index.html">Work</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-                </nav>
+				<div class="navtoggle" id="myNavtoggle">
+					<a href="index.html"><img class="logo" src="img/im-logo.png" alt="Iris Mace"></a>
+            		<nav>
+						<ul class="navigation">
+							<li><a href="index.html">Work</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+							<li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fa-solid fa-bars fa-xl" style="#ffffff"></i></a></li>
+						</ul>
+                	</nav>
+				</div>
             </div>
 		</header>
 		<main>
@@ -85,14 +92,16 @@
 				</div>
 				<div class="social">
 					<ul>
-						<li><a href="https://www.linkedin.com/in/iris-mace-b9a7b7149" target="_blank"><img src="img/linkedin.png" alt="linkedin">
+						<li><a href="https://www.linkedin.com/in/iris-mace-b9a7b7149" target="_blank"><i class="fa-brands fa-linkedin fa-2xl" style="color: #ffffff;"></i>
 						</a></li>
-						<li><a href="https://www.behance.net/igmace"  target="_blank"><img src="img/behance.png" alt="behance">
+						<li><a href="https://www.behance.net/igmace"  target="_blank"><i class="fa-brands fa-square-behance fa-2xl" style="color: #ffffff;"></i>
 						</a></li>
 					</ul>	
 				</div>
 				<p>Copyright Iris Mace 2024</p>
 			</div>
 		</footer>
+		<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+		<script src="js/scripts.js"></script>
 	</body>
 </html>
