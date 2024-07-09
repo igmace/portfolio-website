@@ -69,6 +69,9 @@ Hero Section
   margin-left: auto;
   margin-right: auto;
 }
+#hero-p {
+  display: none;
+}
 /* ==============================
 General Styles
 ================================= */
@@ -195,6 +198,12 @@ Layout Styling
 .social > ul > li {
     display: inline-block;
   }
+#linkedin {
+  padding-right: 10px;
+}
+#behance {
+  padding-left: 10px;
+}
 #modernfinds-case-study {
   max-width: 1200px;
   text-align: left;
@@ -241,6 +250,9 @@ Medium devices (641px and larger)
   .navtoggle li:last-child {
   display: none;
   }
+  #hero-p {
+    display: inline-block;
+  }
   main {
     padding-top: 96px;
   }
@@ -273,6 +285,10 @@ Medium devices (641px and larger)
    margin-left: auto;
    margin-right: auto;
  }
+ #contact {
+  max-width: 1200px;
+  text-align: left;
+}
 }
 /* ==============================
 Large devices (900px or larger)
