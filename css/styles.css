@@ -195,6 +195,18 @@ Layout Styling
 .social > ul > li {
     display: inline-block;
   }
+#modernfinds-case-study {
+  max-width: 1200px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+#casa-case-study {
+  max-width: 1200px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* ==============================
 Medium devices (641px and larger)
 ================================= */
