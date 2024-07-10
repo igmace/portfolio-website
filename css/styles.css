@@ -223,7 +223,10 @@ a:visited {
   padding-right: 10px;
 }
 #behance {
-  padding-left: 10px;
+  padding: 0 10px;
+}
+#email {
+  padding: 0 10px;
 }
 #modernfinds-case-study,
 #casa-case-study  {
