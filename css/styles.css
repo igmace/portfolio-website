@@ -12,7 +12,7 @@ header {
 }
 .logo {
   max-width: 150px;
-  padding-top: 10px ;
+  padding-top: 10px;
 }
 main {
   padding-top: 86px;
@@ -28,7 +28,8 @@ nav > ul > li > a.icon {
 .navtoggle li:not(:last-child) {
   display: none;
 }
-.navtoggle, .navtoggle.responsive {
+.navtoggle,
+.navtoggle.responsive {
   position: relative;
 }
 .navtoggle li .icon {
@@ -37,17 +38,17 @@ nav > ul > li > a.icon {
   top: 2px;
   font-size: 20px;
 }
-.navtoggle.responsive li  {
+.navtoggle.responsive li {
   display: block;
 }
 .navtoggle.responsive nav {
   padding: 24px 0 0;
 }
-.navtoggle.responsive li  {
+.navtoggle.responsive li {
   display: block;
   padding: 10px 0;
 }
-.navtoggle.responsive li:last-child  {
+.navtoggle.responsive li:last-child {
   padding: 0 0 10px;
 }
 /* ==============================
@@ -61,7 +62,7 @@ Hero Section
   display: inline-block;
   width: 100%;
 }
-#hero span { 
+#hero span {
   display: block;
 }
 #hero-text {
@@ -76,141 +77,156 @@ Hero Section
 General Styles
 ================================= */
 body {
-   background-color: #ffffff;
-   font-family: "Montserrat", sans-serif;
-   font-size: 18px;
-   font-weight: 400;
-   line-height: 1.6;
-   color: #202020;
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #202020;
 }
-h1, h2, h3, h4 {
-    line-height: 1.4;
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.4;
 }
 h1 {
-    font-size: 1.25em;
-    font-weight: 600;
- }
+  font-size: 1.75em;
+  font-weight: 600;
+}
 h2 {
-  font-size: 1.15em;
+  font-size: 1.50em;
   font-weight: 575;
- }
+}
 h3 {
-  font-size: 1.10em;
+  font-size: 1.25em;
   font-weight: 500;
- }
- img {
-    width: 100%;
-  }
-  #pr-image {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-  a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #ffffff;
-  }
-  a:active { 
-    color: #ffffff;
-  }
-  a:visited { 
-    color: #ffffff;
-  }
-  .button {
-    display: inline-block; 
-    background-color: #202020;
-    color: #ffffff;
-    font-weight: 400;
-    text-decoration: none;
-    padding: 8px 20px;
-    border-radius: 3px;
-    transition: 0.5s opacity;
-  }
-  .button:hover {
-    color: #ffffff;
-    opacity: 0.8;
-    text-decoration: none;
-  }
-  .button:active {
-    color: #ffffff;
-    opacity: 0.8;
-    text-decoration: none;
-  }
-  .button:visited {
-    color: #ffffff;
-    opacity: 0.8;
-    text-decoration: none;
-  }
-  .button.resume {
-    margin-top: 10px;
-    margin-bottom: 15px;
-  }
-  .button.contact {
-    background-color: transparent;
-    color: #ffffff;
-    padding: 8px 20px;
-    text-align: center;
-    border: 2px solid #ffffff;
-    transition: 0.5s opacity;
-  }
-  .button.contact:hover {
-    background-color: #ffffff;
-    color: #202020;
-    font-weight: 500;
-    opacity: 0.8;
- }
-/* ==============================
-Layout Styling
-================================= */
-  .container {
-    padding: 0 15px;
-  }
-  .row {
-    margin: 25px 0;
-  }
-  #work .row { 
-    padding-bottom: 25px;
-  }
-  .footer {
-    background-color: #202020;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 0;
-    display: inline-block;
-    width: 100%;
-  }
-  #about-me {
-    background-color: #6877dc;
-    color: #ffffff;
-    text-align: center;
-    padding: 5px 0;
-    display: inline-block;
-    width: 100%;
-  }
+}
+#portfoliosite h3, #project-icons h3 {
+  color: #6877dc;
+  margin-top: 16px;
+}
+#project-icons h3 {
+  text-align: center;
+}
+img {
+  width: 100%;
+}
+.col-md-3 {
+  display: flex;
+  justify-content: center;
+}
+#pr-image {
+  width: 100%;
+  height: auto;
+}
+#casa-p {
+  display: none;
+}
+#modernfinds-p {
+  display: none;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffffff;
+}
+a:active {
+  color: #ffffff;
+}
+a:visited {
+  color: #ffffff;
+}
+.button {
+  display: inline-block;
+  background-color: #202020;
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 3px;
+  transition: 0.5s opacity;
+}
+.button:hover {
+  color: #ffffff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.button:active {
+  color: #ffffff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.button:visited {
+  color: #ffffff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.button.resume {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.button.contact {
+  background-color: transparent;
+  color: #ffffff;
+  padding: 8px 20px;
+  text-align: center;
+  border: 2px solid #ffffff;
+  transition: 0.5s opacity;
+}
+.button.contact:hover {
+  background-color: #ffffff;
+  color: #202020;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.container {
+  padding: 0 15px;
+}
+#about-me {
+  background-color: #6877dc;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 0;
+  display: inline-block;
+  width: 100%;
+}
+#project-icons img {
+  height: auto;
+  width: auto;
+}
+.row {
+  margin: 25px 0;
+}
+#work .row {
+  padding-bottom: 25px;
+}
+.footer {
+  background-color: #202020;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
 .social > ul {
-    list-style-type: none;
-    padding: 5px;
-    width: 100%;
-  }
+  list-style-type: none;
+  padding: 5px;
+  width: 100%;
+}
 .social > ul > li {
-    display: inline-block;
-  }
+  display: inline-block;
+}
 #linkedin {
   padding-right: 10px;
 }
 #behance {
   padding-left: 10px;
 }
-#modernfinds-case-study {
-  max-width: 1200px;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
-}
-#casa-case-study {
+#modernfinds-case-study,
+#casa-case-study  {
   max-width: 1200px;
   text-align: left;
   margin-left: auto;
@@ -245,50 +261,61 @@ Medium devices (641px and larger)
     color: #ffffff;
   }
   .navtoggle li:not(:last-child) {
-  display: inline-block;
+    display: inline-block;
   }
   .navtoggle li:last-child {
-  display: none;
-  }
-  #hero-p {
-    display: inline-block;
+    display: none;
   }
   main {
     padding-top: 96px;
   }
   h3 {
-    margin-top: -8px;  
+    margin-top: -8px;
   }
   .col-md-6 {
     width: 50%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-9 {
+    width: 75%;
   }
   [class*="col-"] {
     float: left;
     padding: 10px;
   }
-#my-story img {
-  width: 50%;
-  margin-left: 18px;
-  margin-bottom: 18px;
-  float: right;
-}
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-.button {
-   width:auto;
- }
- .container {
-   max-width: 1200px;
-   margin-left: auto;
-   margin-right: auto;
- }
- #contact {
-  max-width: 1200px;
-  text-align: left;
-}
+  #my-story img {
+    width: 50%;
+    margin-left: 18px;
+    margin-bottom: 18px;
+    float: right;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .button {
+    width: auto;
+  }
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #project-icons h3 {
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 60px;
+  }
+  #project-icons .row {
+    padding: 0 60px;
+  }
+  #contact {
+    max-width: 1200px;
+    text-align: left;
+  }
 }
 /* ==============================
 Large devices (900px or larger)
@@ -305,6 +332,15 @@ Large devices (900px or larger)
   }
   #hero-text {
     max-width: unset;
+  }
+  #hero-p {
+    display: inline-block;
+  }
+  #casa-p {
+    display: block;
+  }
+  #modernfinds-p {
+    display: block;
   }
   [class*="col-"] {
     float: left;
@@ -385,12 +421,13 @@ ul.navigation a {
   padding: 10px 10px;
   position: relative;
 }
-ul.navigation a:before, ul.navigation a:after {
+ul.navigation a:before,
+ul.navigation a:after {
   position: absolute;
   opacity: 0;
   width: 0%;
   height: 1px;
-  content: '';
+  content: "";
   background: #ffffff;
   transition: all 0.3s;
 }
@@ -402,41 +439,62 @@ ul.navigation a:after {
   right: 0px;
   bottom: 0px;
 }
-ul.navigation a:hover:before, ul.navigation a:hover:after {
+ul.navigation a:hover:before,
+ul.navigation a:hover:after {
   opacity: 1;
   width: 100%;
 }
 @keyframes color-change-sky {
-  from {fill: #d8deff;}
-  to {fill: #ffced9;}
+  from {
+    fill: #dde0fb;
+  }
+  to {
+    fill: #ffbbbb;
+  }
 }
-.sky {
-  animation: 6s color-change-sky infinite alternate linear;
+.sky-back {
+  animation: 5s color-change-sky infinite alternate linear;
 }
-  @keyframes color-change-sun {
-   from {fill: #fff07e;}
-    to {fill: #fd7e2a}
+@keyframes color-change-sun {
+  from {
+    fill: #fff2d7;
+  }
+  to {
+    fill: #ffa844;
+  }
 }
 .sun {
-  animation: 6s color-change-sun infinite alternate linear;
+  animation: 5s color-change-sun infinite alternate linear;
 }
 @keyframes color-change-sea {
-  from {fill: #a1cdf6;}
-  to {fill: #6877dc;}
+  from {
+    fill: #89d1f3;
+  }
+  to {
+    fill: #6877dc;
+  }
 }
 .sea {
-  animation: 6s color-change-sea infinite alternate linear;
+  animation: 5s color-change-sea infinite alternate linear;
 }
 @keyframes cloud-move {
-  from {transform: translate(0,0px);}
-  to {transform: translate(300px,0);}
+  from {
+    transform: translate(0, 0px);
+  }
+  to {
+    transform: translate(300px, 0);
+  }
 }
 .cloud-front {
   animation: 30s cloud-move infinite alternate linear;
 }
 @keyframes cloud-move-reverse {
-  from {transform: translate(150px,-50px);}
-  to {transform: translate(0, -50px);}
+  from {
+    transform: translate(150px, -50px);
+  }
+  to {
+    transform: translate(0, -50px);
+  }
 }
 .cloud-back {
   animation: 30s cloud-move-reverse infinite alternate linear;
