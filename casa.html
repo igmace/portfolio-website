@@ -28,22 +28,21 @@
     <header>
       <div class="container">
         <div class="navtoggle" id="myNavtoggle">
-          <a href="index.html"
-            ><img class="logo" src="img/im-logo.png" alt="Iris Mace"
-          ></a>
+          <a href="index.html"><img class="logo" src="img/im-logo.png" alt="Iris Mace"></a>
           <nav>
             <ul class="navigation">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="#contact">Resume</a></li>
-              <li>
-                <a
-                  href="javascript:void(0);"
-                  class="icon"
-                  onclick="menuToggle()"
-                  ><i class="fa-solid fa-bars fa-xl" style="color: #ffffff"></i
-                ></a>
-              </li>
+              <li><a class="menu" href="index.html">Home</a></li>
+              <li><a class="menu" href="about.html">About</a></li>
+              <li><a class="menu" href="#contact">Contact</a></li>
+              <li><a class="menu" href="files/iris-mace-resume-2024.pdf" target="_blank">Resume</a></li>
+              <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()">
+                  <div class="menu-container" onclick="myFunction(this)"> 
+                    <div class="bar1"></div> 
+                    <div class="bar2"></div> 
+                    <div class="bar3"></div> 
+                  </div> 
+                 </a>
+             </li>
             </ul>
           </nav>
         </div>
@@ -141,11 +140,15 @@
           <div class="social">
             <ul>
               <li>
+                <a href="mailto:igmace1@gmail.com" id="email"><i class="fa-solid fa-envelope fa-xl" style="color: #ffffff;"></i>
+                </a>
+              </li>
+              <li>
                 <a
                   href="https://www.linkedin.com/in/iris-mace-b9a7b7149"
                   target="_blank" id="linkedin"
                   ><i
-                    class="fa-brands fa-linkedin fa-2xl"
+                    class="fa-brands fa-linkedin-in fa-xl"
                     style="color: #ffffff"
                   ></i>
                 </a>
@@ -153,18 +156,14 @@
               <li>
                 <a href="https://www.behance.net/igmace" target="_blank" id="behance"
                   ><i
-                    class="fa-brands fa-square-behance fa-2xl"
+                    class="fa-brands fa-behance fa-xl"
                     style="color: #ffffff"
                   ></i>
                 </a>
               </li>
-              <li>
-                <a href="mailto:igmace1@gmail.com" id="email"><i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i>
-                </a>
-              </li>
             </ul>
           </div>
-          <p>Copyright Iris Mace 2024</p>   
+          <p id="copyright">Copyright Iris Mace 2024</p>   
         </div>
       </div>
     </footer>
