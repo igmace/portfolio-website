@@ -9,6 +9,7 @@ header {
   padding: 10px 0;
   position: fixed;
   width: 100%;
+  z-index: 1000;
 }
 .logo {
   max-width: 150px;
@@ -21,9 +22,14 @@ nav > ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  text-transform: uppercase;
+  font-weight: 500;
 }
-nav > ul > li > a.icon {
-  margin-top: 6px;
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  margin-top: 13px;
 }
 .navtoggle li:not(:last-child) {
   display: none;
@@ -32,15 +38,6 @@ nav > ul > li > a.icon {
 .navtoggle.responsive {
   position: relative;
 }
-.navtoggle li .icon {
-  position: absolute;
-  right: 0;
-  top: 2px;
-  font-size: 20px;
-}
-.navtoggle.responsive li {
-  display: block;
-}
 .navtoggle.responsive nav {
   padding: 24px 0 0;
 }
@@ -48,9 +45,22 @@ nav > ul > li > a.icon {
   display: block;
   padding: 10px 0;
 }
-.navtoggle.responsive li:last-child {
-  padding: 0 0 10px;
-}
+.bar1, .bar2, .bar3 { 
+  width: 35px; 
+  height: 4px; 
+  background-color: #ffffff; 
+  margin: 6px 0; 
+  border-radius: 4px; 
+  transition: 0.4s; 
+} 
+.change .bar1 { 
+  transform: translate(0, 10px) rotate(-45deg); 
+} 
+.change .bar2 {opacity: 0;} 
+.change .bar3 { 
+  transform: translate(0, -10px) rotate(45deg); 
+} 
+
 /* ==============================
 Hero Section
 ================================= */
@@ -64,11 +74,6 @@ Hero Section
 }
 #hero span {
   display: block;
-}
-#hero-text {
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
 }
 #hero-p {
   display: none;
@@ -109,21 +114,18 @@ h3 {
 #project-icons h3 {
   text-align: center;
 }
+#project-icons ul{
+  list-style-type: none;
+  padding: 0 10px;
+}
 img {
   width: 100%;
-}
-.col-md-3 {
-  display: flex;
-  justify-content: center;
 }
 #pr-image {
   width: 100%;
   height: auto;
 }
-#casa-p {
-  display: none;
-}
-#modernfinds-p {
+#modernfinds-p, #casa-p, #portfoliosite-p {
   display: none;
 }
 a {
@@ -165,7 +167,7 @@ a:visited {
   text-decoration: none;
 }
 .button.resume {
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 .button.contact {
@@ -183,7 +185,7 @@ a:visited {
   opacity: 0.8;
 }
 .container {
-  padding: 0 15px;
+  padding: 0 20px;
 }
 #about-me {
   background-color: #6877dc;
@@ -196,6 +198,7 @@ a:visited {
 #project-icons img {
   height: auto;
   width: auto;
+  margin: 0 50px;
 }
 .row {
   margin: 25px 0;
@@ -219,13 +222,13 @@ a:visited {
 .social > ul > li {
   display: inline-block;
 }
-#linkedin {
+#email {
   padding-right: 10px;
 }
-#behance {
+#linkedin {
   padding: 0 10px;
 }
-#email {
+#behance {
   padding: 0 10px;
 }
 #modernfinds-case-study,
@@ -235,42 +238,19 @@ a:visited {
   margin-left: auto;
   margin-right: auto;
 }
+#copyright {
+  padding-top: 30px;
+  font-size: 14px;
+}
 /* ==============================
 Medium devices (641px and larger)
 ================================= */
 @media only screen and (min-width: 641px) {
-  header {
-    text-align: unset;
-    padding: 20px 0 13px;
-  }
-  .logo {
-    padding-top: 7px;
-  }
-  nav {
-    width: auto;
-    float: right;
-    margin-top: 4px;
-  }
-  nav > ul {
-    margin: 11px 0;
-  }
-  nav > ul > li {
-    display: inline-block;
-  }
-  nav > ul > li > a {
-    padding: 0 10px;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: #ffffff;
-  }
-  .navtoggle li:not(:last-child) {
-    display: inline-block;
-  }
-  .navtoggle li:last-child {
-    display: none;
+  #hero {
+    text-align: left;
   }
   main {
-    padding-top: 96px;
+    padding-top: 84px;
   }
   h3 {
     margin-top: -8px;
@@ -287,6 +267,9 @@ Medium devices (641px and larger)
   [class*="col-"] {
     float: left;
     padding: 10px;
+  }
+  #about-me {
+    text-align: left;
   }
   #my-story img {
     width: 50%;
@@ -309,14 +292,11 @@ Medium devices (641px and larger)
   }
   #project-icons h3 {
     text-align: left;
+    float: left;
     margin-left: 50px;
     margin-top: 60px;
   }
-  #project-icons .row {
-    padding: 0 60px;
-  }
   #contact {
-    max-width: 1200px;
     text-align: left;
   }
 }
@@ -324,14 +304,16 @@ Medium devices (641px and larger)
 Large devices (900px or larger)
 ================================= */
 @media only screen and (min-width: 900px) {
-  header {
-    text-align: unset;
-    padding: 20px 0 13px;
-  }
   nav {
     width: auto;
     float: right;
-    margin-top: 4px;
+    margin-top: 20px;
+  }
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+  .navtoggle li:last-child {
+    display: none;
   }
   #hero-text {
     max-width: unset;
@@ -345,87 +327,22 @@ Large devices (900px or larger)
   #modernfinds-p {
     display: block;
   }
-  [class*="col-"] {
-    float: left;
-    padding: 10px;
-  }
   .row::after {
     content: "";
     clear: both;
     display: table;
-  }
-  .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-/* ==============================
-X-large devices (1440px or larger)
-================================= */
-@media only screen and (min-width: 1440px) {
-  header {
-    text-align: unset;
-    padding: 20px 0 13px;
-  }
-  nav {
-    width: auto;
-    float: right;
-    margin-top: 4px;
-  }
-  [class*="col-"] {
-    float: left;
-    padding: 10px;
-  }
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-/* ==============================
-Extra-large devices (1920px or larger)
-================================= */
-@media only screen and (min-width: 1920px) {
-  header {
-    text-align: unset;
-    padding: 20px 0 13px;
-  }
-  nav {
-    width: auto;
-    float: right;
-    margin-top: 4px;
-  }
-  [class*="col-"] {
-    float: left;
-    padding: 10px;
-  }
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 /* ==============================
 Animations
 ================================= */
-ul.navigation a {
+ul.navigation a.menu {
   color: #ffffff;
   padding: 10px 10px;
   position: relative;
 }
-ul.navigation a:before,
-ul.navigation a:after {
+ul.navigation a.menu:before,
+ul.navigation a.menu:after {
   position: absolute;
   opacity: 0;
   width: 0%;
@@ -434,16 +351,16 @@ ul.navigation a:after {
   background: #ffffff;
   transition: all 0.3s;
 }
-ul.navigation a:before {
+ul.navigation a.menu:before {
   left: 0px;
   top: 0px;
 }
-ul.navigation a:after {
+ul.navigation a.menu:after {
   right: 0px;
   bottom: 0px;
 }
-ul.navigation a:hover:before,
-ul.navigation a:hover:after {
+ul.navigation a.menu:hover:before,
+ul.navigation a.menu:hover:after {
   opacity: 1;
   width: 100%;
 }
@@ -501,4 +418,24 @@ ul.navigation a:hover:after {
 }
 .cloud-back {
   animation: 30s cloud-move-reverse infinite alternate linear;
+}
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 280px;
+    max-width: 1200px;
+    margin: 0;
+    z-index: 1;
+    padding-bottom: 40px;
+}
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+}
+text.highcharts-title {
+    display: none;
 }
